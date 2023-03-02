@@ -55,7 +55,7 @@ public final class ForwardingTokenGenerator {
             }
         }
 
-        if (entryList.size() > 0) {
+        if (!entryList.isEmpty()) {
             dbManager.forwardingTokenDBDao.insertTokenHostBatch(entryList);
             System.out.println(entryList.size() + " tokens inserted.");
         }
